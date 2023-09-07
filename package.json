@@ -9,6 +9,10 @@
   "categories": [
     "Other"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nglhrdt/upload-po-editor-term.git"
+  },
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
