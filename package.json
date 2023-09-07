@@ -6,6 +6,8 @@
   "engines": {
     "vscode": "^1.81.0"
   },
+  "publisher": "nglhrdt",	
+  "license": "MIT",
   "categories": [
     "Other"
   ],
