@@ -1,0 +1,62 @@
+{
+  "name": "upload-po-editor-term",
+  "displayName": "upload po editor term",
+  "description": "Upload new PO Editor terms from code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "upload-po-editor-term.uploadTermFromSelection",
+        "title": "Upload Term From Selection"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "Upload PO Editor Term",
+        "properties": {
+          "upload-po-editor-term.apiToken": {
+            "type": "string",
+            "default": null,
+            "description": "PO Editor API Token with read/write access"
+          },
+          "upload-po-editor-term.projectId": {
+            "type": "string",
+            "default": null,
+            "description": "PO Editor Project ID"
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.81.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "@vscode/test-electron": "^2.3.4",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "axios": "^1.5.0"
+  }
+}
